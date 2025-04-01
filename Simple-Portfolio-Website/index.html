@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Innovative and interactive portfolio by [Your Name], featuring full-stack web development projects.">
+    <title>Maotaw - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Particles container -->
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Maotaw</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-container">    
+        <div class="hero-text">
+            <h1>Hello I'm <span class="glow">Maotaw</span></h1>
+            <p>
+                I’m a passionate <span class="highlight typing"></span> dedicated to building stunning and efficient digital experiences.
+            </p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
+        </div>
+    </div>
+</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>ABOUT ME</h2>
+        <p>I'm Maotaw, a passionate developer specializing in full-stack development, creating powerful, beautiful applications that improve the user experience.</p>
+    </section>
+
+    <section id="skillset" class="skillset">
+        <h3>What I Know</h3>
+        <ul class="skills-list">
+            <li><i class="fa-brands fa-html5"></i> HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+            <li><i class="fa-solid fa-code"></i> C++</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+            <li><i class="fa-solid fa-database"></i> MySQL</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>MY PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A cutting-edge app built with React and Node.js, providing seamless interaction and real-time functionality.</p>
+                <a href="#" class="cta-btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>A sophisticated platform developed using Vue.js and Firebase, with a focus on scalability and performance.</p>
+                <a href="#" class="cta-btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A cloud-based solution, built using AWS and Angular, that simplifies the complexities of managing large datasets.</p>
+                <a href="#" class="cta-btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
