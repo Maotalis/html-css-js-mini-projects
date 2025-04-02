@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Controller X - Landing Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            color: #333;
+            min-height: 100vh;
+
+        }
+
+        h1, h3, p {
+            margin: 0;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0px;
+            background: linear-gradient(135deg, #0a0a0a, #34495e8e); /* Modern gradient background */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            left: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            position: relative;
+            right: 40px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #ebdcdf, #2b8eff);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 30px;
+            height: 23px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: relative;
+            right: 30px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 4px;
+            width: 100%;
+            background: white;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Hero Section */
+        .header {
+            position: relative;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0a0a, #34495e); /* Modern gradient background */
+
+        }
+
+        .header-c {
+            animation: zoomInImage 1.5s ease-out forwards;
+        }
+
+        .header img {
+            width: 400px;
+            height: 400px;
+            animation: zoomInImage 1.5s ease-out forwards;
+        }
+
+        @keyframes zoomInImage {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .header h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .header p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .header button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .header button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px;
+            flex-wrap: wrap;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s 2s forwards;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 40px;
+            max-width: 300px;
+            margin: 20px;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+            background: transparent;
+            margin-top: 100px;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature i {
+            font-size: 60px;
+            color: #c0392b;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .feature:hover i {
+            color: #e74c3c;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .video-demo {
+            text-align: center;
+            padding: 60px;
+            background-color: #ecf0f1;
+        }
+
+        .video-demo h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .video-demo iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials {
+            color: white;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .testimonial {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 20px;
+            background: linear-gradient(135deg, #0a0a0aa4, #34495e); /* Modern gradient background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial p {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        .testimonial h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ffffff;
+
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.9em;
+            }
+
+            .header p {
+                font-size: 1.2em;
+            }
+
+            .features {
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            .cta button {
+                padding: 12px 30px;
+            }
+
+            .feature {
+                max-width: 100%;
+                margin: 10px;
+            }
+
+            .video-demo iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            .testimonial {
+                width: 80%;
+            }
+
+            .testimonials h2 {
+                font-size: 1.7em;
+                margin-bottom: 30px;
+                color: #2c3e50;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 76%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #0a0a0a, #34495e); /* Modern gradient background */
+                text-align: center;
+                padding: 15px;
+                border-radius: 16px;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                visibility: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+            }
+
+            .logo {
+                left: 25px;
+            }
+
+            .video-demo h2{
+                font-size: 1.7rem;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Controller X</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="header">
+        <div class="header-c">
+            <img src="controller.png" alt="Controller Image">
+            <h1>Super Controller X</h1>
+            <p>The ultimate controller for your gaming experience!</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature">
+            <i class="fas fa-rocket"></i>
+            <h3>Speed & Performance</h3>
+            <p>Boost your gameplay with ultra-responsive controls.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Durability</h3>
+            <p>Built to last, withstand intense gameplay sessions.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-battery-full"></i>
+            <h3>Long Battery Life</h3>
+            <p>Play for hours without worrying about battery life.</p>
+        </div>
+    </div>
+
+    <!-- Video Demo Section -->
+    <div class="video-demo">
+        <h2>Watch the Controller in Action</h2>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Customer Testimonials Section -->
+    <div class="testimonials">
+        <h2 class="testimonials-text">What Gamers Are Saying</h2>
+        <div class="testimonial">
+            <p>"The best controller I've ever used! It's super responsive and feels perfect in my hands."</p>
+            <h3>John Doe - Pro Gamer</h3>
+        </div>
+        <div class="testimonial">
+            <p>"I can game for hours without worrying about comfort or battery life. Truly an amazing product!"</p>
+            <h3>Jane Smith - Casual Gamer</h3>
+        </div>
+        <div class="testimonial">
+            <p>"The durability of this controller is unmatched. I've dropped it multiple times, and it still works like new."</p>
+            <h3>Alex Green - Gamer Enthusiast</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Super Controller X. All rights reserved.</p>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
