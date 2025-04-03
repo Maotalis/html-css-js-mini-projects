@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Controller X - Landing Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Controller X</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="header">
+        <div class="header-c">
+            <img src="controller.png" alt="Controller Image">
+            <h1>Super Controller X</h1>
+            <p>The ultimate controller for your gaming experience!</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature">
+            <i class="fas fa-rocket"></i>
+            <h3>Speed & Performance</h3>
+            <p>Boost your gameplay with ultra-responsive controls.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Durability</h3>
+            <p>Built to last, withstand intense gameplay sessions.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-battery-full"></i>
+            <h3>Long Battery Life</h3>
+            <p>Play for hours without worrying about battery life.</p>
+        </div>
+    </div>
+
+    <!-- Video Demo Section -->
+    <div class="video-demo">
+        <h2>Watch the Controller in Action</h2>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Customer Testimonials Section -->
+    <div class="testimonials">
+        <h2 class="testimonials-text">What Gamers Are Saying</h2>
+        <div class="testimonial">
+            <p>"The best controller I've ever used! It's super responsive and feels perfect in my hands."</p>
+            <h3>John Doe - Pro Gamer</h3>
+        </div>
+        <div class="testimonial">
+            <p>"I can game for hours without worrying about comfort or battery life. Truly an amazing product!"</p>
+            <h3>Jane Smith - Casual Gamer</h3>
+        </div>
+        <div class="testimonial">
+            <p>"The durability of this controller is unmatched. I've dropped it multiple times, and it still works like new."</p>
+            <h3>Alex Green - Gamer Enthusiast</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Super Controller X. All rights reserved.</p>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
