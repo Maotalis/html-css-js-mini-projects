@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+          <a href="#">⚡ Legendary</a>
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </header>
+
+  <!-- Parallax Background -->
+  <div class="parallax-bg">
+    <div class="layer stars"></div>
+        <div class="layer glow"></div>
+        <div class="custom-fog-layer">
+        <div class="fog"></div>
+        <div class="fog"></div>
+        <div class="fog"></div>
+        <div class="fog"></div>
+        <div class="fog"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="glass-card">
+        <div class="profile-image">
+          <img src="profil3.jpg" alt="Your Face" />
+        </div>
+        <h1 class="intro">Hi, I’m <span class="highlight"><span id="typed"></span></span></h1>
+        <p class="tagline">I build mind-blowing websites with style, speed, and soul.</p>
+        <a href="#work" class="magic-btn">⚡ Explore My World</a>
+      </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">Skills & Tech Stack</h2>
+    <div class="skills-grid">
+      <!-- Skill Card 1: HTML -->
+      <div class="skill-card">
+        <div class="icon-container">
+          <i class="fab fa-html5 fa-4x htmll"></i> <!-- HTML Icon -->
+        </div>
+        <div class="skill-level">
+          <div class="progress-bar html" data-progress="90"></div>
+        </div>
+      </div>
+      <!-- Skill Card 2: CSS -->
+      <div class="skill-card">
+        <div class="icon-container">
+          <i class="fab fa-css3-alt fa-4x csss"></i> <!-- CSS Icon -->
+        </div>
+        <div class="skill-level">
+          <div class="progress-bar css" data-progress="80"></div>
+        </div>
+      </div>
+      <!-- Skill Card 3: JavaScript -->
+      <div class="skill-card">
+        <div class="icon-container">
+          <i class="fab fa-js-square fa-4x jsss"></i> <!-- JavaScript Icon -->
+        </div>
+        <div class="skill-level">
+          <div class="progress-bar js" data-progress="85"></div>
+        </div>
+      </div>
+      <!-- Additional Skill Cards -->
+      <div class="skill-card">
+        <div class="icon-container">
+          <i class="fab fa-python fa-4x pyyy"></i> <!-- Python Icon -->
+        </div>
+        <div class="skill-level">
+          <div class="progress-bar python" data-progress="35"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-container">
+          <i class="fab fa-node fa-4x nodejss"></i> <!-- Node.js Icon -->
+        </div>
+        <div class="skill-level">
+          <div class="progress-bar node " data-progress="50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3 class="project-title">File Transfer App</h3>
+                    <p class="project-description">Fast & elegant drag-and-drop file sharing app.</p>
+                    <a href="#" class="magic-btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">This masterpiece you're seeing now.</p>
+                    <a href="#" class="magic-btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3 class="project-title">Game Mod Toolkit</h3>
+                    <p class="project-description">Educational tool for game memory editing (for fun + learning).</p>
+                    <a href="#" class="magic-btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div class="contact-container">
+          <div class="form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+              <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="input-group">
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Legendary Portfolio | All Rights Reserved</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
