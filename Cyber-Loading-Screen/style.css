@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.loader-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #000 40%, #111);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starFly 2s linear infinite;
+}
+
+@keyframes starFly {
+    0% {
+      transform: translateZ(0) scale(0.2);
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateZ(600px) scale(2);
+      opacity: 0;
+    }
+}
+
+.cube {
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    animation: spinCube 10s infinite linear;
+}
+
+@keyframes spinCube {
+    from { transform: rotateX(0) rotateY(0); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(0,255,255,0.1);
+    border: 2px solid cyan;
+    box-shadow: 0 0 30px cyan;
+}
+
+.front  { transform: translateZ(40px); }
+.back   { transform: rotateY(180deg) translateZ(40px); }
+.right  { transform: rotateY(90deg) translateZ(40px); }
+.left   { transform: rotateY(-90deg) translateZ(40px); }
+.top    { transform: rotateX(90deg) translateZ(40px); }
+.bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+.scanlines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0,255,255,0.05) 0px,
+      rgba(0,255,255,0.05) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    animation: scanPulse 0.3s infinite;
+    pointer-events: none;
+}
+
+@keyframes scanPulse {
+    0% { opacity: 0.05; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.05; }
+}
+
+.glitch-text {
+    color: #0ff;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: glitch 0.3s infinite;
+    text-shadow: 0 0 5px #0ff, 0 0 20px #0ff;
+}
+
+@keyframes glitch {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-1px); }
+    50% { transform: translateY(1px); }
+    75% { transform: translateY(-1px); }
+    100% { transform: translateY(1px); }
+}
+
+.progress-bar {
+    width: 250px;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid cyan;
+    overflow: hidden;
+    box-shadow: 0 0 10px cyan;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #0ff, #0f0);
+    box-shadow: 0 0 20px #0ff;
+    animation: loadProgress 5s ease-in-out forwards;
+}
+
+@keyframes loadProgress {
+    to { width: 100%; }
+}
+
+#main-content {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-out {
+    animation: explodeFade 2s ease forwards;
+}
+
+@keyframes explodeFade {
+    to {
+      opacity: 0;
+      transform: scale(2);
+      filter: blur(50px);
+    }
+}
